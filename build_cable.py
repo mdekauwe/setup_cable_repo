@@ -50,7 +50,8 @@ class BuildCable(object):
         if error == 1:
             raise("Error checking if repo exists")
 
-        fname = "build.ksh"
+        #fname = "build.ksh"
+        fname = "build3.sh"
         f = open(fname, "r")
         lines = f.readlines()
         f.close()
@@ -160,7 +161,8 @@ class BuildCable(object):
 
             self.NCDIR = '/mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/lib64/'
             self.NCMOD = '//mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/include'
-
+            self.FC = 'ifort'
+            
             if self.debug:
                 #self.CFLAGS = "'-O0'"
                 self.CFLAGS = "'-O0 -fp-model precise -fpe0 -g -traceback  -nostand -check all,noarg_temp_created -debug all'"
@@ -168,7 +170,7 @@ class BuildCable(object):
                 self.CFLAGS = "'-O2'"
             self.LD = "'-lnetcdf -lnetcdff'"
             self.LDFLAGS = "'-L/opt/local/lib -O2'"
-            
+
         else:
             # this won't work on qsub as the nodename isn't raijinX, it
             # is r1997 (etc) elif "raijin" in nodename:
