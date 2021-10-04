@@ -131,6 +131,25 @@ class BuildCable(object):
             self.LD = "'-lnetcdf -lnetcdff'"
             self.LDFLAGS = "'-L/opt/local/lib -O2'"
 
+        elif "bc4l" in nodename:
+
+            cmd = "module load netCDF/4.3.3.1-foss-2016a"
+            error = subprocess.call(cmd, shell=True)
+            if error == 1:
+                raise("Error loading netcdf libs")
+
+            self.NCDIR = '/mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/lib64/'
+            self.NCMOD = '//mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/include'
+            self.FC = 'mpif90'
+
+            if self.debug:
+                #self.CFLAGS = "'-O0'"
+                self.CFLAGS = "'-O0 -fp-model precise -fpe0 -g -traceback  -nostand -check all,noarg_temp_created -debug all'"
+            else:
+                self.CFLAGS = "'-O2'"
+            self.LD = "'-lnetcdf -lnetcdff'"
+            self.LDFLAGS = "'-L/opt/local/lib -O2'"
+
         else:
             # this won't work on qsub as the nodename isn't raijinX, it
             # is r1997 (etc) elif "raijin" in nodename:
