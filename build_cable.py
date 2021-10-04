@@ -50,8 +50,8 @@ class BuildCable(object):
         if error == 1:
             raise("Error checking if repo exists")
 
-        #fname = "build.ksh"
-        fname = "build3.sh"
+        fname = "build.ksh"
+        #fname = "build3.sh"
         f = open(fname, "r")
         lines = f.readlines()
         f.close()
