@@ -114,7 +114,8 @@ if __name__ == "__main__":
     src_dir = cwd
     user = "mgk576"
     #repo = "https://trac.nci.org.au/svn/cable/branches/Users/mgk576/trunk_covid"
-    repo = "https://trac.nci.org.au/svn/cable/trunk"
+    #repo = "https://trac.nci.org.au/svn/cable/trunk"
+    repo = "https://trac.nci.org.au/svn/cable/branches/Users/mgk576/profitmax_euc_pfts"
     #repo = "trunk"
     # ------------------------------------------- #
 

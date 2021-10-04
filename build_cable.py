@@ -162,7 +162,7 @@ class BuildCable(object):
             self.NCDIR = '/mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/lib64/'
             self.NCMOD = '//mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/include'
             self.FC = 'ifort'
-            
+
             if self.debug:
                 #self.CFLAGS = "'-O0'"
                 self.CFLAGS = "'-O0 -fp-model precise -fpe0 -g -traceback  -nostand -check all,noarg_temp_created -debug all'"
@@ -204,7 +204,8 @@ if __name__ == "__main__":
 
     #------------- Change stuff ------------- #
     src_dir = cwd
-    repo = "trunk"
+    #repo = "trunk"
+    repo = "profitmax_euc_pfts"
     define_own_paths = False
     debug = False
 
