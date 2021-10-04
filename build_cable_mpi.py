@@ -139,7 +139,7 @@ class BuildCable(object):
                 raise("Error loading netcdf libs")
 
             self.NCDIR = '/mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/lib64/'
-            self.NCMOD = '//mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/include'
+            self.NCMOD = '/mnt/storage/easybuild/software/netCDF/4.3.3.1-foss-2016a/include/'
             self.FC = 'mpif90'
 
             if self.debug:
