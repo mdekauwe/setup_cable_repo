@@ -159,8 +159,8 @@ class BuildCable(object):
             if error == 1:
                 raise("Error loading netcdf libs")
 
-            self.NCDIR = '/mnt/storage/software/libraries/gnu/netcdf-4.7.0/lib/'
-            self.NCMOD = '/mnt/storage/software/libraries/gnu/netcdf-4.7.0/include/'
+            self.NCDIR = '/mnt/storage/software/libraries/intel/netcdf-4.7.0/lib/'
+            self.NCMOD = '/mnt/storage/software/libraries/intel/netcdf-4.7.0/include/'
             self.FC = 'ifort'
 
             if self.debug:
