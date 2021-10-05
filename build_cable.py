@@ -169,7 +169,7 @@ class BuildCable(object):
             else:
                 self.CFLAGS = "'-O2'"
             self.LD = "'-lnetcdf -lnetcdff'"
-            self.LDFLAGS = "'-L/opt/local/lib -O2'"
+            self.LDFLAGS = "'-L/mnt/storage/software/libraries/intel/netcdf-4.7.0/lib -O2'"
 
         else:
             # this won't work on qsub as the nodename isn't raijinX, it
