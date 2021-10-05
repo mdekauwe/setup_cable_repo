@@ -154,13 +154,13 @@ class BuildCable(object):
 
         elif "bc4l" in nodename:
 
-            cmd = "module load libs/netcdf/4.7.3"
+            cmd = "module load libs/netcdf/4.7.0"
             error = subprocess.call(cmd, shell=True)
             if error == 1:
                 raise("Error loading netcdf libs")
 
-            self.NCDIR = '/mnt/storage/software/libraries/gnu/netcdf-4.7.3/lib/'
-            self.NCMOD = '/mnt/storage/software/libraries/gnu/netcdf-4.7.3/include/'
+            self.NCDIR = '/mnt/storage/software/libraries/gnu/netcdf-4.7.0/lib/'
+            self.NCMOD = '/mnt/storage/software/libraries/gnu/netcdf-4.7.0/include/'
             self.FC = 'ifort'
 
             if self.debug:
