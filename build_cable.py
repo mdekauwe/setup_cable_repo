@@ -111,7 +111,7 @@ class BuildCable(object):
 
     def set_paths(self, nodename):
 
-        if "Mac" in nodename or "imac" in nodename:
+        if "Mac" in nodename or "imac" in nodename or "FVFG54A8Q05N" in nodename::
             self.NCDIR = '/opt/local/lib/'
             self.NCMOD = '/opt/local/include/'
             self.FC = 'gfortran'
@@ -122,7 +122,7 @@ class BuildCable(object):
                 self.CFLAGS = "'-O2'"
 
             self.LD = "'-L/opt/local/lib -lnetcdf -lnetcdff'"
-            self.LDFLAGS = "'-L/opt/local/lib -L/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib'"
+            self.LDFLAGS = "'-L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -lSystem'"
 
 
         elif "unsw" in nodename:
