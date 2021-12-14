@@ -82,7 +82,7 @@ class BuildCable(object):
 
                 print("}", end="\n\n", file=of)
 
-                i += 5
+                i += 4
             elif ('known_hosts()' not in line) and (check_host in line):
                 # rename duplicate host, i.e. stud
                 fudge_host = "host_%s()" % ("XXXX")
@@ -111,7 +111,11 @@ class BuildCable(object):
 
     def set_paths(self, nodename):
 
-        if "Mac" in nodename or "imac" in nodename or "FVFG54A8Q05N" in nodename::
+        if ("Martins" in nodename
+            or "Mac" in nodename
+            or "imac" in nodename
+            or "FVFG54A8Q05N" in nodename):
+            
             self.NCDIR = '/opt/local/lib/'
             self.NCMOD = '/opt/local/include/'
             self.FC = 'gfortran'
